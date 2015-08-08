@@ -1,6 +1,35 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('SignInCtrl', function($scope, $state, $timeout, $ionicLoading, session) {
+  $scope.signIn = function(user) {
+    $ionicLoading.show();
+    $timeout(function() {
+      console.log('Sign-In', user);
+      session.customerId = user.id;
+      $ionicLoading.hide();
+      $state.go('tab.dash');
+    }, 600);
+  };
+})
+
+.controller('DashCtrl', function($scope, api, location, session) {
+
+  $scope.showPosition = function(position) {
+    $scope.coords = {};
+    
+    location.id = session.customerId;
+    location.latitude = position.coords.latitude;
+    location.longitude = position.coords.longitude;
+    //$scope.$apply();
+
+    api.getRisk(location).then(function(response){
+      session.riskSolution = parseInt(response);
+    });
+  };
+
+  navigator.geolocation.getCurrentPosition($scope.showPosition);
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -21,24 +50,21 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('PackageCrimeCtrl', function($scope, $stateParams, $timeout, $ionicLoading, sessionService, Chats) {
-  $ionicLoading.show();
-  $scope.package = sessionService || {};
-  $timeout(function() {
-      $scope.assessed = true;
-      $scope.package.selectedSolution = 3;
-      $ionicLoading.hide();
-    }, 2000);
+.controller('PackageCrimeCtrl', function($scope, $stateParams, $timeout, $ionicLoading, api, session, Chats) {
+  $scope.package = session || {};
+  
+  $scope.package.riskSolution = session.riskSolution;
+  $scope.package.selectedSolution = session.currentSolution;
+})
+
+.controller('TermsCtrl', function($scope, $stateParams, $timeout, session) {
+  $scope.package = session || {};
+
   //$scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('TermsCtrl', function($scope, $stateParams, $timeout, sessionService) {
-  $scope.package = sessionService || {};
-  //$scope.chat = Chats.get($stateParams.chatId);
-})
-
-.controller('ConfirmPurchaseCtrl', function($scope, $stateParams, $state, sessionService) {
-  $scope.package = sessionService || {};
+.controller('ConfirmPurchaseCtrl', function($scope, $stateParams, $state, session) {
+  $scope.package = session || {};
   $scope.gotoDash = function() {
     $state.go('tab.dash');
   };
@@ -47,6 +73,6 @@ angular.module('starter.controllers', [])
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
-    enableFriends: true
+    enableTracking: true
   };
 });

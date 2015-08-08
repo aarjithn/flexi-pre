@@ -43,18 +43,18 @@ a:active {
 	font-size: 1.5em;
 }
 .dash-list ion-item h2{
-	font-size: 1.5em;
+	font-size: 1.3em;
 	display: inline-block;
 	vertical-align: middle;
 	padding-top: 30px;
 }
 
 .dash-list.dash-crime ion-item.header a{
-	min-height: 200px;
+	min-height: 125px;
 }
 
 .dash-list.dash-crime ion-item.header h2{
-	padding-top: 50px;
+	padding-top: 25px;
 }
 
 .risk-profiles .title{

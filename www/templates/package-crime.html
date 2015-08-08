@@ -2,25 +2,18 @@
   <ion-content>
     <ion-list class="dash-list dash-crime">
 
-      <ion-item class="header" ng-hide="assessed">
-        <a href="#" class="list-item calm">
-          <h2>Assessing your location</h2>
-          <p>Please wait..</p>
-        </a>
-      </ion-item>
-
-      <ion-item class="header" ng-show="assessed">
+      <ion-item class="header">
         <a href="#" class="list-item concerned">
           <h2>Your risk level is</h2>
-          <h1>3</h1>
-          <p>Tap to set as your plan</p>
+          <h1>{{package.riskSolution}}</h1>
+          <!-- <p>Tap to set as your plan</p> -->
         </a>
       </ion-item>
 
       <ion-item>
         <a class="list-item">
-          <h2>Or</h2>
-          <p>select one of the below</p>
+          <h2>Currently selected</h2>
+          <p>Tap any to set as your plan</p>
         </a>
       </ion-item>
 
@@ -41,10 +34,6 @@
 		  <a class="button" ng-class="{'button-energized' : package.selectedSolution === 4}" ng-click="package.selectedSolution = 4">
 		  	<span class="title">Solution</span>
 		  	<span class="level">4</span>
-		  </a>
-		  <a class="button" ng-class="{'button-assertive' : package.selectedSolution === 5}" ng-click="package.selectedSolution = 5">
-		  	<span class="title">Solution</span>
-		  	<span class="level">5</span>
 		  </a>
 		</div>
  	 </ion-item>

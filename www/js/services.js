@@ -47,4 +47,44 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+
+.factory("session", function() {
+  return {
+    currentSolution : 2
+  };
+})
+
+.factory("location", function() {
+  return {};
+})
+
+.factory("api",['$http',function($http){
+  var baseURL = "http://flexipre.azurewebsites.net/FlexiPremiumAssesment";
+  var postHeaders = {
+        'Accept': 'application/json, text/javascript',
+        'Content-Type': 'application/json; charset=utf-8',
+        'X-Requested-With': 'XMLHttpRequest'
+   };
+  
+  var api = {};
+
+  api.postRisk = function (formData){
+    return $http({
+      method: "POST",
+      url: baseURL+"/getRisk",
+      data: JSON.stringify(formData),
+      headers: postHeaders
+    }).then(function(response){return response;});
+  };
+
+  api.getRisk = function (customer){
+    return $http({
+      method: "GET",
+      url: baseURL+"/pollingServlet.html",
+      params: {customerId: customer.id, latitude: customer.latitude, longitude: customer.longitude}
+    }).then(function(response){return response.data;});
+  };
+
+  return api;
+}]);
