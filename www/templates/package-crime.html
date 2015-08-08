@@ -1,0 +1,125 @@
+<ion-view view-title="Package">
+  <ion-content>
+    <ion-list class="dash-list dash-crime">
+
+      <ion-item class="header" ng-hide="assessed">
+        <a href="#" class="list-item calm">
+          <h2>Assessing your location</h2>
+          <p>Please wait..</p>
+        </a>
+      </ion-item>
+
+      <ion-item class="header" ng-show="assessed">
+        <a href="#" class="list-item concerned">
+          <h2>Your risk level is</h2>
+          <h1>3</h1>
+          <p>Tap to set as your plan</p>
+        </a>
+      </ion-item>
+
+      <ion-item>
+        <a class="list-item">
+          <h2>Or</h2>
+          <p>select one of the below</p>
+        </a>
+      </ion-item>
+
+      <ion-item class="risk-profiles">
+		<div class="button-bar">
+		  <a class="button" ng-class="{'button-positive' : package.selectedSolution === 1}" ng-click="package.selectedSolution = 1">
+		  	<span class="title">Solution</span>
+		  	<span class="level">1</span>
+		  </a>
+		  <a class="button" ng-class="{'button-calm' : package.selectedSolution === 2}" ng-click="package.selectedSolution = 2">
+		  	<span class="title">Solution</span>
+		  	<span class="level">2</span>
+		  </a>
+		  <a class="button" ng-class="{'button-balanced' : package.selectedSolution === 3}" ng-click="package.selectedSolution = 3">
+		  	<span class="title">Solution</span>
+		  	<span class="level">3</span>
+		  </a>
+		  <a class="button" ng-class="{'button-energized' : package.selectedSolution === 4}" ng-click="package.selectedSolution = 4">
+		  	<span class="title">Solution</span>
+		  	<span class="level">4</span>
+		  </a>
+		  <a class="button" ng-class="{'button-assertive' : package.selectedSolution === 5}" ng-click="package.selectedSolution = 5">
+		  	<span class="title">Solution</span>
+		  	<span class="level">5</span>
+		  </a>
+		</div>
+ 	 </ion-item>
+
+      <ion-item class="item-text-wrap" ng-show="package.selectedSolution === 1">
+        <a class="padding list-item">
+          <h2>Solution 1</h2>
+          <p>Explains why solution 1 is useful, and all the associated stuff with it</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </a>
+      </ion-item>
+
+      <ion-item class="item-text-wrap" ng-show="package.selectedSolution === 2">
+        <a class="padding list-item">
+          <h2>Solution 2</h2>
+          <p>Explains why solution 2 is useful, and all the associated stuff with it</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </a>
+      </ion-item>
+
+      <ion-item class="item-text-wrap" ng-show="package.selectedSolution === 3">
+        <a class="padding list-item">
+          <h2>Solution 3</h2>
+          <p>Explains why solution 3 is useful, and all the associated stuff with it</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </a>
+      </ion-item>
+
+      <ion-item class="item-text-wrap" ng-show="package.selectedSolution === 4">
+        <a class="padding list-item">
+          <h2>Solution 4</h2>
+          <p>Explains why solution 4 is useful, and all the associated stuff with it</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </a>
+      </ion-item>
+
+      <ion-item class="item-text-wrap" ng-show="package.selectedSolution === 5">
+        <a class="padding list-item">
+          <h2>Solution 5</h2>
+          <p>Explains why solution 5 is useful, and all the associated stuff with it</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </a>
+      </ion-item>
+
+      <ion-item class="item-text-wrap" ng-show="package.selectedSolution">
+		<a class="button button-block button-dark" id="button-get-package" href="#/tab/dash/crime/terms">
+		  Get the package solution {{package.selectedSolution}}
+		</a>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,33 +1,36 @@
 <ion-view view-title="Dashboard">
-  <ion-content class="padding" ng-class="{'nav-open': navOpen === true}">
-  <div class="list card">
-      <div class="item item-body">
-        <div>
-          <h2>Hello, User</h2>
-          <p>Welcome to the app</p>
-          <p>Your Status</p>
-          <p>On track</p>
-          <p>Due: 19 Aug 2015</p>
-          <p>Amount: £200</p>
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div> 
-
+  <ion-content>
+    <ion-list class="dash-list">
+      <ion-item>
+        <a class="list-item protected ">
+          <h2>Life</h2> <i class="icon dash-icon ion-ios-heart"></i>
+          <p>Protected</p>
+        </a>
+      </ion-item>
+      <ion-item>
+        <a href="#/tab/dash/crime" class="list-item concerned">
+          <h2>Crime</h2> <i class="icon dash-icon ion-ios-bell"></i>
+          <p>Review your plan</p>
+        </a>
+      </ion-item>
+      <ion-item>
+        <a href="#" class="list-item inactive">
+          <h2>Accident</h2> <i class="icon dash-icon ion-android-car"></i>
+          <p>Add this package</p>
+        </a>
+      </ion-item>
+      <ion-item>
+        <a href="#" class="list-item inactive">
+          <h2>Travel</h2> <i class="icon dash-icon ion-plane"></i>
+          <p>Add this package</p>
+        </a>
+      </ion-item>
+      <ion-item>
+        <a href="#" class="list-item inactive">
+            <h2>Gadget</h2> <i class="icon dash-icon ion-android-phone-portrait"></i>
+          <p>Add this package</p>
+        </a>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

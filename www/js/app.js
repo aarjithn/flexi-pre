@@ -23,6 +23,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
+.factory("sessionService", function() {
+  return {};
+})
+
+.directive('navClear', ['$ionicViewService', function($ionicViewService) {
+  return {
+    restrict: 'AC',
+    link: function($scope, $element, $attr) {
+      $element.bind('click', function(){
+        $ionicViewService.nextViewOptions({
+          disableAnimate: true,
+          disableBack: true
+        });
+      });
+    }
+  };
+}])
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -46,6 +64,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
         controller: 'DashCtrl'
+      }
+    }
+  })
+
+  .state('tab.package-crime', {
+    url: '/dash/crime',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/package-crime.html',
+        controller: 'PackageCrimeCtrl'
+      }
+    }
+  })
+
+  .state('tab.terms-conditions', {
+    url: '/dash/:package/terms',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/terms-conditions.html',
+        controller: 'TermsCtrl'
+      }
+    }
+  })
+
+  .state('tab.confirm-purchase', {
+    url: '/dash/:package/confirm',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/confirm-purchase.html',
+        controller: 'ConfirmPurchaseCtrl'
       }
     }
   })

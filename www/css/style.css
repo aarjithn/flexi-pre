@@ -4,5 +4,113 @@
 
 body {
   background-color: #4A75E6;
-  font-family: 'Lato', sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, button {
+	font-family: 'Lato', sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit; /*color of your choosing*/
+    text-decoration: none;
+    font-weight: normal;
+}
+
+
+.dash-list {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.dash-list ion-item {
+	padding: 0;
+	border-top: 0;
+}
+
+.dash-list ion-item .list-item{
+	display: block;
+	min-height: 120px;
+}
+
+.dash-list ion-item .dash-icon{
+	display: inline-block;
+	padding-top: 30px;
+	vertical-align: middle;
+	font-size: 1.5em;
+}
+.dash-list ion-item h2{
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 30px;
+}
+
+.dash-list.dash-crime ion-item.header a{
+	min-height: 200px;
+}
+
+.dash-list.dash-crime ion-item.header h2{
+	padding-top: 50px;
+}
+
+.risk-profiles .title{
+	font-size: 0.7em;
+}
+
+.risk-profiles span.level{
+	display: block;
+	font-size: 1.5em;
+	margin-top: -15px;
+	margin-bottom: 10px;
+}
+
+.protected {
+	background: linear-gradient(270deg, #00cc50, #00d42d, #00df1c);
+	background-size: 200% 200%;
+	-webkit-animation: color-shift 10s ease infinite;
+	animation: color-shift 10s ease infinite;
+	border-bottom: 4px solid green;
+}
+
+.concerned {
+	background: linear-gradient(270deg, #ffb51e, #f7c549, #ffa000);
+	background-size: 200% 200%;
+	-webkit-animation: color-shift 10s ease infinite;
+	animation: color-shift 10s ease infinite;
+	border-bottom: 4px solid orange;
+}
+
+.inactive {
+	background-color: #f3f3f3;
+	border-bottom: 3px solid lightgray;
+}
+
+@-webkit-keyframes color-shift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes color-shift { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.list-payment {
+	text-align: left;
+}
+
+.list-tnc {
+	text-align: left;
+	margin: 10px 5px -10px;
+}
+
+.checkbox-iagree {
+	text-align: left;
+	border-top-width: 0;
+	border-bottom: 1px;
 }
