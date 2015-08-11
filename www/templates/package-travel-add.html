@@ -1,0 +1,37 @@
+<ion-view view-title="Travel Add">
+	<ion-content>
+		<div class="list travel-add">
+		  <label class="item item-input">
+		    <span class="input-label">Origin</span>
+		    <input ng-model="plan.origin" type="text">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Destination</span>
+		    <input ng-model="plan.destination" type="text">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Date</span>
+		    <input ng-model="plan.date" type="date">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">PNR</span>
+		    <input ng-model="plan.pnr" type="text" >
+		  </label>
+		  <label class="item item-input item-select">
+		    <div class="input-label">
+		      Carrier
+		    </div>
+		    <select ng-model="plan.carrier">
+		      <option>Finnair</option>
+		      <option selected>British Airways</option>
+		      <option>Easyjet</option>
+		      <option>Ryanair</option>
+		      <option>Turkish Airlines</option>
+		    </select>
+		  </label>
+		</div>
+	   	<a class="button button-full button-dark" id="button-get-package" ng-click="goNext()">
+			Add a plan
+	  	</a>
+    </ion-content>
+</ion-view>

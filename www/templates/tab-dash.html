@@ -1,28 +1,39 @@
 <ion-view view-title="Dashboard" cache-view="false">
   <ion-content>
+    <ion-refresher on-refresh="getPosition()" pulling-text="Pull to update location">
+    </ion-refresher>
     <ion-list class="dash-list">
       <ion-item>
-        <a class="list-item protected ">
+        <a class="list-item pink-shift ">
           <h2>Life</h2> <i class="icon dash-icon ion-ios-heart"></i>
-          <p>Protected</p>
+          <p>Plan id: 100443</p>
         </a>
       </ion-item>
       <ion-item>
-        <a href="#/tab/dash/crime" class="list-item concerned">
+        <a href="#/tab/dash/crime" class="list-item" ng-class="crime.activePlan && crime.riskSolution ? crime.riskSolution <= crime.activePlan ? 'green-shift' : 'orange-shift' : 'inactive'">
           <h2>Crime</h2> <i class="icon dash-icon ion-ios-bell"></i>
-          <p>Review your plan</p>
+          <p ng-show="crime.activePlan">
+            <span>Currently active: Solution</span>
+            <span>{{crime.activePlan}}</span>
+          </p>
+          <p ng-hide="crime.activePlan">Add this package</p>
         </a>
       </ion-item>
       <ion-item>
-        <a href="#" class="list-item inactive">
+        <a href="#/tab/dash/accident" class="list-item" ng-class="accident.activePlan && accident.riskSolution ? accident.riskSolution <= accident.activePlan ? 'green-shift' : 'orange-shift' : 'inactive'">
           <h2>Accident</h2> <i class="icon dash-icon ion-android-car"></i>
-          <p>Add this package</p>
+          <p ng-show="accident.activePlan">
+            <span>Currently active: Solution</span>
+            <span>{{accident.activePlan}}</span>
+          </p>
+          <p ng-hide="accident.activePlan">Add this package</p>
         </a>
       </ion-item>
       <ion-item>
-        <a href="#" class="list-item inactive">
+        <a href="#/tab/dash/travel" class="list-item" ng-class="travel.length ? 'blue-shift' : 'inactive'">
           <h2>Travel</h2> <i class="icon dash-icon ion-plane"></i>
-          <p>Add this package</p>
+          <p ng-show="travel.length">{{travel.length}} Plans active</p>
+          <p ng-hide="travel.length">Add this package</p>
         </a>
       </ion-item>
     </ion-list>

@@ -1,0 +1,15 @@
+<ion-view view-title="Travel">
+	<ion-content>
+	    <ion-list class="travel-list text-center">
+	      <ion-item ng-repeat="plan in plans">
+	        <h2>{{plan.origin}} - {{plan.destination}}</h2>
+	        <h3>PNR: {{plan.pnr}}</h3>
+	        <h4>{{plan.date | date:'dd/MM/yyyy'}}</h4>
+	        <p>{{plan.carrier}}</p>
+	      </ion-item>
+	    </ion-list>
+	   	<a class="button button-full button-dark" id="button-get-package" ui-sref="tab.package-travel-add">
+			Add a plan
+	  	</a>
+    </ion-content>
+</ion-view>

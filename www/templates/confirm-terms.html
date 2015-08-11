@@ -3,9 +3,9 @@
     <ion-list class="dash-list dash-crime">
 
       <ion-item class="header">
-        <a href="#" class="list-item concerned">
-          <h2>FlexiPre Crime Care</h2>
-          <h1>Solution 3</h1>
+        <a href="#" class="list-item color-shift">
+          <h2>FlexiPre {{route | capitalize}} Care</h2>
+          <h1 ng-if="package.selectedPlan">Solution {{package.selectedPlan}}</h1>
         </a>
       </ion-item>
 
@@ -21,7 +21,6 @@
 			  <p>These policy terms and conditions provide you with everything you need to know about your Insurance policy. It is important that you read them carefully along with your policy schedule.</p> <br>
 			  <p>If a claim is to be made, these policy terms and conditions will be useful, so please keep them somewhere safe.
 			  You will enter into two separate contracts when you take out an insurance policy through us. The first contract is with us for arranging and administering your insurance policy on your behalf. We shall charge you a fee(s) for providing our services.</p> <br>
-			  <p>Should you have any questions or queries about your policy then call us on 0845 301 6383 and we will be pleased to help you.</p>
 		  </div>
         </a>
       </ion-item>
@@ -65,11 +64,9 @@
 		</div>
       </ion-item>
 
-      <ion-item class="item-text-wrap">
-		<a class="button button-block button-dark" id="button-get-package" href="#/tab/dash/crime/confirm">
-		  Get the plan
-		</a>
-      </ion-item>
+	  <button class="button button-full button-dark" id="button-get-package" ng-click="goNext()" ng-disabled="!isChecked">
+		Get the plan
+	  </button>
 
     </ion-list>
   </ion-content>

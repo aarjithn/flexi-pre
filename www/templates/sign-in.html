@@ -1,8 +1,13 @@
-<ion-view view-title="Flexi Pre">
-	<ion-content>
+<ion-view view-title="Welcome">
+	<ion-content class="login-form">
+		<div class="login-header text-center">
+			<h1><i class="icon ion-ios-pulse"></i></h1>
+			<h2>flexipre</h2>
+			<p>Sign-in to continue</p>
+		</div>
 	  <div class="list">
 	    <label class="item item-input">
-	      <span class="input-label">Username</span>
+	      <span class="input-label">User ID</span>
 	      <input type="text" ng-model="user.id">
 	    </label>
 	    <label class="item item-input">
@@ -11,7 +16,7 @@
 	    </label>
 	  </div>
 	  <div class="padding">
-	    <button class="button button-block button-positive" ng-click="signIn(user)">
+	    <button class="button button-block button-dark" ng-click="signIn(user)">
 	      Sign-In
 	    </button>
 	  </div>

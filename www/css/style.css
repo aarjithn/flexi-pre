@@ -68,7 +68,37 @@ a:active {
 	margin-bottom: 10px;
 }
 
-.protected {
+.login-header {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.login-header i {
+	font-size: 3em;
+}
+
+.login-form .item {
+	background-color: transparent;
+	border-color: rgba(0,0,0,0.1);
+}
+
+.login-form, .color-shift {
+	background: linear-gradient(239deg, #ffd662, #87e6ff, #7aff8e);
+	background-size: 650% 650%;
+	-webkit-animation: color-shift 10s ease infinite;
+	animation: color-shift 10s ease infinite;
+	border-bottom: 0;
+}
+
+.pink-shift {
+	background: linear-gradient(239deg, #ff53a0, #ff80c4, #ff5e75);
+	background-size: 400% 400%;
+	-webkit-animation: color-shift 10s ease infinite;
+	animation: color-shift 10s ease infinite;
+	border-bottom: 4px solid hotpink;
+}
+
+.green-shift {
 	background: linear-gradient(270deg, #00cc50, #00d42d, #00df1c);
 	background-size: 200% 200%;
 	-webkit-animation: color-shift 10s ease infinite;
@@ -76,12 +106,20 @@ a:active {
 	border-bottom: 4px solid green;
 }
 
-.concerned {
+.orange-shift {
 	background: linear-gradient(270deg, #ffb51e, #f7c549, #ffa000);
 	background-size: 200% 200%;
 	-webkit-animation: color-shift 10s ease infinite;
 	animation: color-shift 10s ease infinite;
 	border-bottom: 4px solid orange;
+}
+
+.blue-shift {
+	background: linear-gradient(239deg, #1cbbff, #87f0ff, #34dcf4);
+	background-size: 200% 200%;
+	-webkit-animation: color-shift 10s ease infinite;
+	animation: color-shift 10s ease infinite;
+	border-bottom: 4px solid DeepSkyBlue;
 }
 
 .inactive {
@@ -113,4 +151,25 @@ a:active {
 	text-align: left;
 	border-top-width: 0;
 	border-bottom: 1px;
+}
+
+.travel-list h2{
+	padding-bottom: 2px;
+	font-size: 1.6em;
+}
+
+.travel-add input {
+	text-align: right;
+}
+
+.forecast h2 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 1.9em;
+}
+
+.forecast h4 {
+	float: right;
+	margin-top: -30px;
+	font-size: 1.2em;
 }

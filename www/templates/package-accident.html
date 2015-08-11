@@ -5,7 +5,7 @@
       <ion-item class="header">
         <a href="#" class="list-item color-shift">
           <h2>Your risk score is</h2>
-          <h1>{{crime.riskSolution}}</h1>
+          <h1>{{accident.riskSolution}}</h1>
         </a>
       </ion-item>
 
@@ -18,26 +18,26 @@
 
       <ion-item class="risk-profiles">
 		<div class="button-bar">
-		  <a class="button" ng-class="{'button-positive' : crime.selectedPlan === 1}" ng-click="crime.selectedPlan = 1">
+		  <a class="button" ng-class="{'button-positive' : accident.selectedPlan === 1}" ng-click="accident.selectedPlan = 1">
 		  	<span class="title">Solution</span>
 		  	<span class="level">1</span>
 		  </a>
-		  <a class="button" ng-class="{'button-calm' : crime.selectedPlan === 2}" ng-click="crime.selectedPlan = 2">
+		  <a class="button" ng-class="{'button-calm' : accident.selectedPlan === 2}" ng-click="accident.selectedPlan = 2">
 		  	<span class="title">Solution</span>
 		  	<span class="level">2</span>
 		  </a>
-		  <a class="button" ng-class="{'button-balanced' : crime.selectedPlan === 3}" ng-click="crime.selectedPlan = 3">
+		  <a class="button" ng-class="{'button-balanced' : accident.selectedPlan === 3}" ng-click="accident.selectedPlan = 3">
 		  	<span class="title">Solution</span>
 		  	<span class="level">3</span>
 		  </a>
-		  <a class="button" ng-class="{'button-energized' : crime.selectedPlan === 4}" ng-click="crime.selectedPlan = 4">
+		  <a class="button" ng-class="{'button-energized' : accident.selectedPlan === 4}" ng-click="accident.selectedPlan = 4">
 		  	<span class="title">Solution</span>
 		  	<span class="level">4</span>
 		  </a>
 		</div>
  	 </ion-item>
 
-      <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 1">
+      <ion-item class="item-text-wrap" ng-show="accident.selectedPlan === 1">
         <a class="padding list-item">
           <h2>Solution 1</h2>
           <p>Explains why solution 1 is useful, and all the associated stuff with it</p>
@@ -50,7 +50,7 @@
         </a>
       </ion-item>
 
-      <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 2">
+      <ion-item class="item-text-wrap" ng-show="accident.selectedPlan === 2">
         <a class="padding list-item">
           <h2>Solution 2</h2>
           <p>Explains why solution 2 is useful, and all the associated stuff with it</p>
@@ -63,7 +63,7 @@
         </a>
       </ion-item>
 
-      <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 3">
+      <ion-item class="item-text-wrap" ng-show="accident.selectedPlan === 3">
         <a class="padding list-item">
           <h2>Solution 3</h2>
           <p>Explains why solution 3 is useful, and all the associated stuff with it</p>
@@ -76,7 +76,7 @@
         </a>
       </ion-item>
 
-      <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 4">
+      <ion-item class="item-text-wrap" ng-show="accident.selectedPlan === 4">
         <a class="padding list-item">
           <h2>Solution 4</h2>
           <p>Explains why solution 4 is useful, and all the associated stuff with it</p>
@@ -90,7 +90,7 @@
       </ion-item>
 
   		<a class="button button-full button-dark" id="button-get-package" ng-click="goNext()">
-  		  Get the package solution {{crime.selectedPlan}}
+  		  Get the package solution {{accident.selectedPlan}}
   		</a>
 
     </ion-list>

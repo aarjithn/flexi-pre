@@ -3,30 +3,27 @@
     <ion-list class="dash-list dash-crime">
 
       <ion-item class="header">
-        <a href="#" class="list-item concerned">
-          <h2>FlexiPre Crime protection</h2>
-          <h1>Solution 3</h1>
+        <a href="#" class="list-item color-shift">
+          <h2>FlexiPre {{route | capitalize}} Care</h2>
+          <h1 ng-if="package.selectedPlan">Solution {{package.selectedPlan}}</h1>
         </a>
       </ion-item>
 
       <ion-item class="item-text-wrap">
         <a class="padding list-item">
           <h2>Purchase confirmed</h2>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br><br>
+          <p>Thank you for purchasing Flexipre {{route}} care.</p>
+          <p>You are now covered under the policy, and holds the right to raise claims request.</p>
+          <br>
+          <p>Should you have any questions or queries about your policy then call us on 0845 301 6383 and we will be pleased to help you.</p>
+          <br>
         </a>
       </ion-item>
 
-      <ion-item class="item-text-wrap">
-		<button navClear class="button button-block button-dark" id="button-get-package" ui-sref="tab.dash">
-		  Take me to Dashboard
-		</button>
-      </ion-item>
+  		<button class="button button-full button-dark" id="button-get-package" ui-sref="tab.dash">
+  		  Take me to Dashboard
+  		</button>
 
     </ion-list>
   </ion-content>

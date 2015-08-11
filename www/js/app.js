@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('flexipre', ['ionic', 'flexipre.controllers', 'flexipre.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,16 +21,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       StatusBar.styleLightContent();
     }
   });
-})
-
-.factory("session", function() {
-  return {
-    currentSolution : 2
-  };
-})
-
-.factory("location", function() {
-  return {};
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -55,7 +45,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   // Each tab has its own nav history stack:
-
   .state('tab.dash', {
     url: '/dash',
     views: {
@@ -71,17 +60,47 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-dash': {
         templateUrl: 'templates/package-crime.html',
-        controller: 'PackageCrimeCtrl'
+        controller: 'CrimeCtrl'
       }
     }
   })
 
-  .state('tab.terms-conditions', {
+  .state('tab.package-accident', {
+    url: '/dash/accident',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/package-accident.html',
+        controller: 'AccidentCtrl'
+      }
+    }
+  })
+
+  .state('tab.package-travel', {
+    url: '/dash/travel',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/package-travel.html',
+        controller: 'TravelCtrl'
+      }
+    }
+  })
+
+  .state('tab.package-travel-add', {
+    url: '/dash/travel-add',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/package-travel-add.html',
+        controller: 'TravelAddCtrl'
+      }
+    }
+  })
+
+  .state('tab.confirm-terms', {
     url: '/dash/:package/terms',
     views: {
       'tab-dash': {
-        templateUrl: 'templates/terms-conditions.html',
-        controller: 'TermsCtrl'
+        templateUrl: 'templates/confirm-terms.html',
+        controller: 'ConfirmTermsCtrl'
       }
     }
   })
@@ -96,21 +115,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.forecast', {
+      url: '/forecast',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-forecast': {
+          templateUrl: 'templates/tab-forecast.html',
+          controller: 'ForecastCtrl'
         }
       }
     })

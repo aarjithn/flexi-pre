@@ -1,0 +1,44 @@
+<ion-view view-title="Dashboard" cache-view="false">
+  <ion-content>
+    <ion-list class="forecast">
+      <h2 class="text-center">Your forecast</h2>
+      <p class="text-center">Your premium for the next period <br> is calculated as below</p>
+      <ion-item>
+        <a class="list-item protected ">
+          <h3>Life</h3>
+          <p>Plan id: 100443</p>
+          <h4>£24.00</h4>
+        </a>
+      </ion-item>
+      <ion-item>
+          <h3>Crime</h3>
+          <p>
+            <span>Solution</span>
+            <span>{{crime.activePlan}}</span>
+          </p>
+          <h4>£{{forecast.crime | number:2}}</h4>
+        </a>
+      </ion-item>
+      <ion-item>
+          <h3>Accident</h3>
+          <p>
+            <span>Solution</span>
+            <span>{{accident.activePlan}}</span>
+          </p>
+          <h4>£{{forecast.accident | number:2}}</h4>
+        </a>
+      </ion-item>
+
+      <ion-item>
+          <h3>Total</h3>
+          <p>
+            <span>Amounts to</span>
+          </p>
+          <h4>£{{forecast.total | number:2}}</h4>
+        </a>
+      </ion-item>
+
+
+    </ion-list>
+  </ion-content>
+</ion-view>
