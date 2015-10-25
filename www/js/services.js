@@ -19,10 +19,10 @@ angular.module('flexipre.services', [])
   return {
     route: '',
     crime: {
-      activePlan : 2
+      activePlan : 1
     },
     accident: {
-      activePlan : 3
+      activePlan : 1
     },
     travel: {
       plans : function() {

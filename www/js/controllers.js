@@ -123,6 +123,7 @@ angular.module('flexipre.controllers', [])
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
-    enableTracking: true
+    enableTracking: true,
+    rememberCard: true
   };
 });

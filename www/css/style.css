@@ -57,6 +57,11 @@ a:active {
 	padding-top: 25px;
 }
 
+.switch-plan h3{
+	font-size: 1.2em;
+	padding-top: 5px;
+}
+
 .risk-profiles .title{
 	font-size: 0.7em;
 }
@@ -98,7 +103,15 @@ a:active {
 	border-bottom: 4px solid hotpink;
 }
 
-.green-shift {
+.dblue-shift, .color-shift-1 {
+	background: linear-gradient(239deg, #5361ff, #108be9, #5e79ff);
+	background-size: 200% 200%;
+	-webkit-animation: color-shift 10s ease infinite;
+	animation: color-shift 10s ease infinite;
+	border-bottom: 4px solid mediumblue;
+}
+
+.green-shift, .color-shift-3 {
 	background: linear-gradient(270deg, #00cc50, #00d42d, #00df1c);
 	background-size: 200% 200%;
 	-webkit-animation: color-shift 10s ease infinite;
@@ -106,7 +119,7 @@ a:active {
 	border-bottom: 4px solid green;
 }
 
-.orange-shift {
+.orange-shift, .color-shift-4 {
 	background: linear-gradient(270deg, #ffb51e, #f7c549, #ffa000);
 	background-size: 200% 200%;
 	-webkit-animation: color-shift 10s ease infinite;
@@ -114,7 +127,7 @@ a:active {
 	border-bottom: 4px solid orange;
 }
 
-.blue-shift {
+.blue-shift, .color-shift-2 {
 	background: linear-gradient(239deg, #1cbbff, #87f0ff, #34dcf4);
 	background-size: 200% 200%;
 	-webkit-animation: color-shift 10s ease infinite;
@@ -125,6 +138,10 @@ a:active {
 .inactive {
 	background-color: #f3f3f3;
 	border-bottom: 3px solid lightgray;
+}
+
+.red {
+	color: #ff2222;
 }
 
 @-webkit-keyframes color-shift {

@@ -1,18 +1,19 @@
-<ion-view view-title="Package">
+<ion-view view-title="Crime">
   <ion-content>
     <ion-list class="dash-list dash-crime">
 
       <ion-item class="header">
-        <a href="#" class="list-item color-shift">
-          <h2>Your risk score is</h2>
+        <a href="#" class="list-item color-shift-{{crime.riskSolution}}">
+          <h2>Your crime risk score is</h2>
           <h1>{{crime.riskSolution}}</h1>
         </a>
       </ion-item>
 
       <ion-item>
-        <a class="list-item">
-          <h2>Currently selected</h2>
-          <p>Tap any to set as your plan</p>
+        <a class="list-item item-text-wrap padding switch-plan">
+          <h3>Switch Plan</h3>
+          <p>We recommend you to switch to the plan according to the risk score.</p>
+          <p>Your current plan is highlighted.</p>
         </a>
       </ion-item>
 
@@ -40,53 +41,141 @@
       <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 1">
         <a class="padding list-item">
           <h2>Solution 1</h2>
-          <p>Explains why solution 1 is useful, and all the associated stuff with it</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>The main characteristics of the plan is detailed below. For further information,
+          click <b>here</b></p>
         </a>
+
+        <div class="list list-payment">
+          <a class="item" href="#">
+            Plan name
+            <span class="item-note">
+              Crime - Solution {{crime.selectedPlan}}
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium frequency
+            <span class="item-note">
+              Quarterly
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium rate
+            <span class="item-note">
+              £14
+            </span>
+          </a>
+          <a class="item" href="#">
+            Claim Turnaround time
+            <span class="item-note">
+              1 Month
+            </span>
+          </a>
+      </div>
       </ion-item>
 
       <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 2">
-        <a class="padding list-item">
+       <a class="padding list-item">
           <h2>Solution 2</h2>
-          <p>Explains why solution 2 is useful, and all the associated stuff with it</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>The main characteristics of the plan is detailed below. For further information,
+          click <b>here</b></p>
         </a>
+
+        <div class="list list-payment">
+          <a class="item" href="#">
+            Plan name
+            <span class="item-note">
+              Crime - Solution {{crime.selectedPlan}}
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium frequency
+            <span class="item-note">
+              Quarterly
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium rate
+            <span class="item-note">
+              £16
+            </span>
+          </a>
+          <a class="item" href="#">
+            Claim Turnaround time
+            <span class="item-note">
+              3 Weeks
+            </span>
+          </a>
+      </div>
       </ion-item>
 
       <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 3">
-        <a class="padding list-item">
+       <a class="padding list-item">
           <h2>Solution 3</h2>
-          <p>Explains why solution 3 is useful, and all the associated stuff with it</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>The main characteristics of the plan is detailed below. For further information,
+          click <b>here</b></p>
         </a>
+
+        <div class="list list-payment">
+          <a class="item" href="#">
+            Plan name
+            <span class="item-note">
+              Crime - Solution {{crime.selectedPlan}}
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium frequency
+            <span class="item-note">
+              Quarterly
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium rate
+            <span class="item-note">
+              £18
+            </span>
+          </a>
+          <a class="item" href="#">
+            Claim Turnaround time
+            <span class="item-note">
+              2 Weeks
+            </span>
+          </a>
+      </div>
       </ion-item>
 
       <ion-item class="item-text-wrap" ng-show="crime.selectedPlan === 4">
-        <a class="padding list-item">
+       <a class="padding list-item">
           <h2>Solution 4</h2>
-          <p>Explains why solution 4 is useful, and all the associated stuff with it</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>The main characteristics of the plan is detailed below. For further information,
+          click <b>here</b></p>
         </a>
+
+        <div class="list list-payment">
+          <a class="item" href="#">
+            Plan name
+            <span class="item-note">
+              Crime - Solution {{crime.selectedPlan}}
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium frequency
+            <span class="item-note">
+              Quarterly
+            </span>
+          </a>
+          <a class="item" href="#">
+            Premium rate
+            <span class="item-note">
+              £20
+            </span>
+          </a>
+          <a class="item" href="#">
+            Claim Turnaround time
+            <span class="item-note">
+              1 Week
+            </span>
+          </a>
+      </div>
       </ion-item>
 
   		<a class="button button-full button-dark" id="button-get-package" ng-click="goNext()">
